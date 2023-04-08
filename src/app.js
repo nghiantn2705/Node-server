@@ -1,6 +1,7 @@
 import express from "express";
 import productRouter from "./routes/product.js";
 import authRouter from "./routes/auth.js";
+import categoryRouter from "./routes/category.js";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
@@ -14,6 +15,7 @@ app.use(express.json());
 
 app.use("/api", productRouter);
 app.use("/api", authRouter);
+app.use("/api", categoryRouter);
 
 
 mongoose.connect(API_DB);

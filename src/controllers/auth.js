@@ -40,7 +40,7 @@ export const signup = async (req, res) => {
     user.password = undefined;
     return res.status(201).json({
       message: "User created successfully",
-      user,
+     user,
   
     });
   } catch (error) {
@@ -88,6 +88,7 @@ export const signin = async (req, res) => {
       message: "Đăng nhập thành công",
       accessToken: token,
       user,
+      
     });
   } catch (error) {
     return res.status(400).json({
